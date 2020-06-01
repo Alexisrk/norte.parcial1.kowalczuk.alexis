@@ -1,7 +1,96 @@
 ﻿
 @{
-    ViewBag.Title = "Cosmos";
+		ViewBag.Title = "Cosmos";
 }
 
-<h2>Cosmos</h2>
+<div id="cosmos_container">
+		<h2>Cosmos</h2>
 
+		<br />
+		<label>Siglo</label>
+		<br />
+		<input id="siglo" type="text" />
+		<br />
+		<br />
+		<label>Nombre</label>
+		<br />
+		<input id="nombre" type="text" />
+
+		<br />
+
+		<br />
+
+		<div class="btnPanel">
+				<button onclick="agregar()">Agregar</button>
+
+				<button onclick="listar()">Listar</button>
+
+				<button onclick="listarTabla()">Listar Como Tabla</button>
+
+				<button onclick="limpiar()">Limpiar</button>
+
+		</div>
+		
+		<br />
+		<div id="list" />
+</div>
+
+
+
+@section scripts
+{
+		<script>
+				var constellaciones = new Array();
+				function constelacion() {
+						this.setNombre = function (value) { this._nombre = value; }
+						this.getNombre = function () { return this._nombre; }
+						this.setSiglo = function (value) { this._siglo = value; }
+						this.getSiglo = function () { return this._siglo; }
+				}
+
+				function agregar() {
+						//document.getElementById("nombre").value
+						var vnombre = document.getElementById("nombre").value;
+						var vsiglo = document.getElementById("siglo").value;
+
+						if (!vnombre || !vsiglo)
+								return;
+
+						var c = new constelacion();
+						c.setNombre(vnombre);
+						c.setSiglo(vsiglo);
+						
+						constellaciones.push(c);
+
+						listar();
+
+						document.getElementById("nombre").value = "";
+						document.getElementById("siglo").value = "";
+				}
+
+				function listar() {
+						var result = document.getElementById("list");
+						result.innerHTML = "Nombre			Siglo" + "<br/>";
+						for (var i = 0; i < constellaciones.length; i++) {
+								result.innerHTML += constellaciones[i].getNombre() + " - " + constellaciones[i].getSiglo() + "<br/>";
+						}
+				}
+				
+				function listarTabla() {
+						var result = document.getElementById("list");
+						var table = "<table> <thead> <tr><th>Nombre</th><th>Siglo</th></tr></thead>";
+						table += "<tbody>";
+						for (var i = 0; i < constellaciones.length; i++) {
+								table += "<tr><td>" + constellaciones[i].getNombre() + "</td><td>" + constellaciones[i].getSiglo() + "</td></tr>";
+						}
+						table += "</tbody> </table>";
+						result.innerHTML = table;
+				}
+
+				function limpiar() {
+						var result = document.getElementById("list");
+						result.innerHTML = "";
+						constellaciones = new Array();
+				}
+		</script>
+}

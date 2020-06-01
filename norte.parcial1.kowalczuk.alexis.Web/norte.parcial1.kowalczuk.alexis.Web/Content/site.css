@@ -64,3 +64,39 @@ footer {
 		text-align:center;
 		background-color: #286af0;
 }
+
+#cosmos_container {
+		margin: 20px;
+}
+
+#cosmos_container input {
+		height: 23px;
+		border-radius: 3px;
+		border: none;
+}
+
+#cosmos_container label {
+		font-family: arial;
+}
+
+.btnPanel button {
+		height: 30px;
+		width: 150px;
+		font-size: 15px;
+		color: white;
+		background-color: #485f66;
+		border: aliceblue;
+		border-radius: 3px;
+}
+
+.btnPanel button:hover {
+		background-color: #338ba6;
+}
+
+th, td {
+		border-bottom: 1px solid #ddd;
+}
+
+table, thead {
+		border: 1px solid lightgoldenrodyellow;
+}
