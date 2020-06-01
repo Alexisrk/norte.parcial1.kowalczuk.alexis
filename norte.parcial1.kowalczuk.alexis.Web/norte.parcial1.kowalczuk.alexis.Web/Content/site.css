@@ -1,2 +1,66 @@
-﻿body {
+﻿/*GENERAL*/
+html, body {
+		height: 100%;
+}
+
+h1, h2, h3 {
+		margin: 0;
+		padding: 0;
+}
+
+/*LAYOUT*/
+#Container {
+		width: 1250px;
+		margin: auto;
+}
+
+header {
+		background-color: #286af0;
+		height: 80px;
+}
+
+header h1 {
+		padding-top: 10px;
+}
+
+section {
+		float: right;
+		width: 80%;
+		min-height: 500px;
+		background-color: #ccc;
+}
+
+aside {
+		float: left;
+		width: 20%;
+		min-height: 500px;
+}
+
+aside article {
+		height: 100%;
+		margin: 20px;
+}
+
+aside article div {
+		margin: 20px;
+		width: 90%;
+		border: solid 2px red;
+		padding: 20px 0px;
+}
+
+#hubblepic img {
+		margin: 50px auto 0px;
+		height: 350px;
+		display: block;
+}
+
+#hubblepic p {
+		text-align: center;
+}
+footer {
+		clear: both;
+		color: white;
+		text-decoration:underline;
+		text-align:center;
+		background-color: #286af0;
 }
