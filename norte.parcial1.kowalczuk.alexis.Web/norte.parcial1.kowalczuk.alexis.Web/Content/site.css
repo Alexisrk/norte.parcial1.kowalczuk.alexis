@@ -16,12 +16,12 @@ h1, h2, h3 {
 
 header {
 		background-color: #286af0;
-		height: 80px;
+		height: 110px;
 }
 
-header h1 {
-		padding-top: 10px;
-}
+		header h1 {
+				padding-top: 10px;
+		}
 
 section {
 		float: right;
@@ -36,17 +36,17 @@ aside {
 		min-height: 500px;
 }
 
-aside article {
-		height: 100%;
-		margin: 20px;
-}
+		aside article {
+				height: 100%;
+				margin: 20px;
+		}
 
-aside article div {
-		margin: 20px;
-		width: 90%;
-		border: solid 2px red;
-		padding: 20px 0px;
-}
+				aside article div {
+						margin: 20px;
+						width: 90%;
+						border: solid 2px red;
+						padding: 20px 0px;
+				}
 
 #hubblepic img {
 		margin: 50px auto 0px;
@@ -57,11 +57,12 @@ aside article div {
 #hubblepic p {
 		text-align: center;
 }
+
 footer {
 		clear: both;
 		color: white;
-		text-decoration:underline;
-		text-align:center;
+		text-decoration: underline;
+		text-align: center;
 		background-color: #286af0;
 }
 
@@ -69,15 +70,16 @@ footer {
 		margin: 20px;
 }
 
-#cosmos_container input {
-		height: 23px;
-		border-radius: 3px;
-		border: none;
-}
+		#cosmos_container input {
+				height: 23px;
+				border-radius: 3px;
+				border: none;
+		}
 
-#cosmos_container label {
-		font-family: arial;
-}
+		#cosmos_container label {
+				font-family: arial;
+		}
+
 
 .btnPanel button {
 		height: 30px;
@@ -89,9 +91,9 @@ footer {
 		border-radius: 3px;
 }
 
-.btnPanel button:hover {
-		background-color: #338ba6;
-}
+		.btnPanel button:hover {
+				background-color: #338ba6;
+		}
 
 th, td {
 		border-bottom: 1px solid #ddd;
@@ -99,4 +101,42 @@ th, td {
 
 table, thead {
 		border: 1px solid lightgoldenrodyellow;
+}
+
+a {
+		text-decoration: none;
+		color: black;
+		margin: 30px;
+		font-size: 20px;
+		font-weight: 800;
+}
+
+		a:hover {
+				color: red;
+		}
+
+#about {
+		margin: 20px;
+		font-family: calibri
+}
+
+nav ul {
+		list-style: unset;
+}
+
+nav ul li {
+		display: inline;
+}
+
+nav ul li a {
+		color: black;
+		text-decoration: none;
+}
+
+nav ul li a:active {
+		color: olive;
+}
+
+nav ul li a:hover {
+		color: white;
 }

@@ -20,5 +20,11 @@ namespace norte.parcial1.kowalczuk.alexis.Web.Controllers
         {
           return View();
         }
+
+        // GET: Home
+        public ActionResult About()
+        {
+            return View();
+        }
     }
 }
